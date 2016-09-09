@@ -3,80 +3,67 @@
     
     <head>
         
-        <title>01</title>
-        
-        <style type="text/css">
-        
-            *{
-                
-                margin: 0;
-                padding: 0;
-                
-            }
+        <title>...</title>
+        <style>
             
             body{
                 
                 background: white;
+                height: 100vh;
+                width: 100vw;
+                overflow: hidden;
                 
             }
             
-            img{
+            p, a{
+            
+                -webkit-animation: fadein 2s;
+                -moz-animation: fadein 2s;
+                -ms-animation: fadein 2s;
+                -o-animation: fadein 2s;
+                animation: fadein 2s;
                 
-                width: 200px;
+            }
+            
+            @keyframes fadein {
+            
+                from { opacity: 0; }
+                to   { opacity: 1; }
+                
+            }
+            
+            p{
+                
+                font-family: helvetica, sans-serif;
+                letter-spacing: 1.2px;
+                font-size: 100px;
                 transform: translate(-50%, -50%);
-                
-            }
-            
-            #door-01{
-                
-                position:absolute;
-                top: 46vh;
-                left: 20vw;
-                
-            }
-            
-            #door-02{
-                
-                position:absolute;
-                top: 46vh;
-                left: 35vw;
-                
-            }
-            
-            #door-03{
-                
-                position:absolute;
-                top: 46vh;
+                position: absolute;
+                top: 30vh;
                 left: 50vw;
                 
             }
             
-            #door-04{
-                
-                position:absolute;
-                top: 46vh;
-                left: 65vw;
-                
+            a{
+            
+            color: lightgrey;
+            position: absolute;
+            top: 94vh;
+            left: 96vw;
+            
             }
             
-            #door-05{
-                
-                position:absolute;
-                top: 46vh;
-                left: 80vw;
-                
-            }
             
         </style>
+        
         
     </head>
     <body>
         
-        <a href="index-02.html" id='door-01'><img src="door-01.svg"></img></a>
-        <a href="index-03.html" id='door-02'><img src="door-02.svg"></img></a>
-        <a href="index-04.html" id='door-03'><img src="door-03.svg"></img></a>
-        <a href="index-05.html" id='door-04'><img src="door-04.svg"></img></a>
-        <a href="index-06.html" id='door-05'><img src="door-05.svg"></img></a>
+        <!--fade in-->
+        
+        <p>Hello World !</p>
+        <a href="index-02.html">next</a>
         
     </body>
     
