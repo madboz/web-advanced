@@ -1,0 +1,169 @@
+*{
+                
+                margin: 0;
+                padding: 0;
+                
+            }
+        
+body{
+        
+        background: white;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        
+    }
+    
+p{
+
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+    
+}
+
+@keyframes fadein {
+
+    from { opacity: 0; }
+    to   { opacity: 1; }
+    
+}
+
+p{
+        
+        font-family: ak, sans-serif;
+        letter-spacing: 1.6px;
+        font-size: 45px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 44vh;
+        left: 50vw;
+        text-align: center;
+        line-height: 46px;
+        
+    }
+    
+i span{
+    
+    color: lightgrey;
+    
+}
+
+a{
+    
+    color: lightgrey;
+    position: absolute;
+    top: 94vh;
+    left: 96vw;
+    
+}
+
+@font-face {
+    
+        font-family: 'ak';
+        src: url('akzidenz.ttf'); 
+        
+    }
+    
+.door{
+                
+    width: 200px;
+    transform: translate(-50%, -50%);
+    
+}
+    
+.label{
+    
+    font-family: ak, sans-serif;
+    letter-spacing: 1.2px;
+    font-size: 36px;
+    
+}
+
+#label-01{
+    
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 78vh;
+    left: 20vw;
+    
+}
+
+#door-01{
+    
+    position:absolute;
+    top: 44vh;
+    left: 20vw;
+    
+}
+
+#label-02{
+    
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 78vh;
+    left: 35vw;
+    
+}
+
+#door-02{
+    
+    position:absolute;
+    top: 44vh;
+    left: 35vw;
+    
+}
+
+#label-03{
+    
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 78vh;
+    left: 50vw;
+    
+}
+
+#door-03{
+    
+    position:absolute;
+    top: 44vh;
+    left: 50vw;
+    
+}
+
+
+#label-04{
+    
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 78vh;
+    left: 65vw;
+    
+}
+
+#door-04{
+    
+    position:absolute;
+    top: 44vh;
+    left: 65vw;
+    
+}
+
+#label-05{
+    
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 78vh;
+    left: 80vw;
+    
+}
+
+#door-05{
+    
+    position:absolute;
+    top: 44vh;
+    left: 80vw;
+    
+}
