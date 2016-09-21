@@ -1,7 +1,7 @@
 console.log("hello world");
 
 var user = "madison"
-var password = "123456"
+var password = "letmein"
 
 if (user == "madison" && password == "letmein") {
     
