@@ -1,9 +1,19 @@
-var timer = 0;
+var timer = 4000;
 var counter = 0;
 
-console.log("%cMaking It Rain", "color:green;")
+setTimeout(function(){
+    console.log("%cmake", "color:green;");
+}, 1000);
 
-for (var i = 0; i < 1000; i++) {
+setTimeout(function(){
+    console.log("%cit", "color:green;");
+}, 2000);
+
+setTimeout(function(){
+    console.log("%crain", "color:green;");
+}, 3000);
+
+for (var i = 0; i < 20; i++) {
     setTimeout(function() {
         var snow = "";
         for (var s = 0; s < 100; s++) {
@@ -16,6 +26,6 @@ for (var i = 0; i < 1000; i++) {
         }
         console.log(snow, "");
     }, timer);
-    timer += 70;
+    timer += 200;
     counter++;
 }
