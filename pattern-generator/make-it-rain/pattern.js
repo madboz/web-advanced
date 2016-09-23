@@ -1,72 +1,74 @@
-var timer = 4000;
+// setTimeout(function(){
+//     console.log("%cmake", "color:green;");
+// }, 1000);
+
+// setTimeout(function(){
+//     console.log("%cit", "color:green;");
+// }, 2000);
+
+// setTimeout(function(){
+//     console.log("%crain", "color:green;");
+// }, 3000);
+
+
+var timer = 0;
 var counter = 0;
 
 setTimeout(function(){
-
     console.log("%cmake", "color:green;");
-    setTimeout(function() {
-
-        console.log("%cit", "color:green;");
         setTimeout(function() {
-
+          console.log("%cit", "color:green;");
+          setTimeout(function() {
             console.log("%crain", "color:green;")
-            for (var i = 0; i < 20; i++) {
-                
+
+
+
+            setTimeout(function(){
+
+                for (var i = 0; i < 19; i++) {
                 setTimeout(function() {
-                    
-                    var snow = "";
-                    for (var s = 0; s < 100; s++) {
-                        
-                        if (Math.random()*100 < 2) {
-                            snow += "[*(1)*]";
+                    var symbol = "";
+                    for (var s = 0; s < 70; s++) {
+                        if (Math.random()*100 < 1) {
+                            symbol += " [$(1)$] ";
                         } else {
-                            snow += "    ";
+                            symbol += " ";
                         }
-    
                     }
-        
-                    console.log(snow, "");
-                
+                    console.log(symbol, "");
                 }, timer);
-                timer += 200;
+                timer += 800;
                 counter++;
-            }
 
-          }, 1000)
-
-      }, 2000);
-
-}, 3000);
-
-var value1 = prompt("Choose a number between 0 and 255:");
-
-var value2 = prompt("Choose a number between 0 and 255:");
-
-var value3 = prompt("Choose a number between 0 and 255:");
+                }
 
 
 
+                setTimeout(function(){
 
+                    for (var i = 0; i < 1000; i++) {
+                    setTimeout(function() {
+                        var symbol = "";
+                        for (var s = 0; s < 100; s++) {
+                            if (Math.random()*100 < 5) {
+                                symbol += " [$(1)$] ";
+                            } else {
+                                symbol += " ";
+                            }
+                        }
+                        console.log(symbol, "");
+                    }, timer);
+                    timer += 100;
+                    counter++;
 
+                    }
 
+                }, 10)
 
+            }, 1000)
 
+        }, 1000)
 
+    }, 1000);
 
-// for (var i = 0; i < 20; i++) {
-//     setTimeout(function() {
-//         var snow = "";
-//         for (var s = 0; s < 100; s++) {
-//             if (Math.random()*100 < 2) {
-//                 snow += "[*(1)*]";
-//             } else {
-//                 snow += "    ";
-//             }
-    
-//         }
-//         console.log(snow, "");
-//     }, timer);
-//     timer += 200;
-//     counter++;
-// }
-
+}, 1000);
