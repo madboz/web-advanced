@@ -28,7 +28,7 @@ setTimeout(function(){
                 for (var i = 0; i < 19; i++) {
                 setTimeout(function() {
                     var symbol = "";
-                    for (var s = 0; s < 70; s++) {
+                    for (var s = 0; s < 100; s++) {
                         if (Math.random()*100 < 1) {
                             symbol += " [$(1)$] ";
                         } else {
@@ -46,11 +46,11 @@ setTimeout(function(){
 
                 setTimeout(function(){
 
-                    for (var i = 0; i < 1000; i++) {
+                    for (var i = 0; i < 1500; i++) {
                     setTimeout(function() {
                         var symbol = "";
                         for (var s = 0; s < 100; s++) {
-                            if (Math.random()*100 < 5) {
+                            if (Math.random()*100 < 7) {
                                 symbol += " [$(1)$] ";
                             } else {
                                 symbol += " ";
