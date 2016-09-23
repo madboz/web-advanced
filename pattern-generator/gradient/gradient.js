@@ -19,7 +19,7 @@ setTimeout(function(){
         setTimeout(function() {
           console.log("%cto", "color:#6699FF;");
           setTimeout(function() {
-            console.log("%cgradient.js", "color:#517ACC;")
+            console.log("%cgradient", "color:#517ACC;")
 
 
 
