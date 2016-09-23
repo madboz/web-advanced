@@ -15,11 +15,11 @@ var timer = 0;
 var counter = 0;
 
 setTimeout(function(){
-    console.log("%cwelcome", "color:#A3C1FF;");
+    console.log("%c3", "color:lightgrey;");
         setTimeout(function() {
-          console.log("%cto", "color:#6699FF;");
+          console.log("%c2", "color:grey;");
           setTimeout(function() {
-            console.log("%cgradient", "color:#517ACC;")
+            console.log("%c1", "color:black;")
 
 
 
