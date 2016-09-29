@@ -32,35 +32,37 @@ $("body").addClass("gradient");
 
 
 
-// $("#toggle").toggle(function(){
+$("#toggle").toggle(function(){
     
-//     $("#toggle").html("Stop");
-//     $("#status").html("GO");
-//     $("#status").css("background", "green")
+    $("#toggle").html("Stop");
+    $("#status").html("GO");
+    $("#status").css("background", "green")
     
-// },function(){
+},function(){
     
-//     $("#toggle").html("Start");
-//     $("#status").html("STOP");
-//     $("#status").css("background", "red")
+    $("#toggle").html("Start");
+    $("#status").html("STOP");
+    $("#status").css("background", "red")
     
-// });
-
-var lightOff = 0;
+});
 
 
-    if (lightOff == 0) {
 
-  		$("#toggle").html("Start");
-        $("#status").html("STOP");
-        $("#status").css("background", "red")
+// var lightOff = 0;
 
-			lightOff = 1;
 
-  	} else {
+//     if (lightOff == 0) {
 
-        $("#toggle").html("Stop");
-        $("#status").html("Go");
-        $("#status").css("background", "green")
+//   	    $("#toggle").html("Start");
+//          $("#status").html("STOP");
+//          $("#status").css("background", "red")
+
+// 			lightOff = 1;
+
+//   	} else {
+
+//          $("#toggle").html("Stop");
+//          $("#status").html("Go");
+//          $("#status").css("background", "green")
         
-  	};
+//   	};
