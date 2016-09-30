@@ -30,28 +30,40 @@ $("#pirate").hide();
 
 $("body").addClass("gradient");
 
+var clicked = false;
 
-
-$("#toggle").toggle(function(){
+$("#toggle").click(function(){
+  
+  if(clicked == false){
     
-    $("#toggle").html("Stop");
-    $("#status").html("GO");
-    $("#status").css("background", "green")
+    $(this).html("Stop");
+    $("#status").html("GO").css("background", "green")
+    clicked = true;
     
-},function(){
+  } else {
     
     $("#toggle").html("Start");
-    $("#status").html("STOP");
-    $("#status").css("background", "red")
+    $("#status").html("STOP").css("background", "red")
+    clicked = false;
+    
+  }
     
 });
 
-$("#status").mouseenter(function() {
-  $("#cat").show();
-});
 
-$("#status").mouseleave(function() {
-  $("#cat").hide();
+
+
+
+$("#status").hover(function() {
+  
+    if(clicked == true){
+    $("#cat").show();
+    }
+  
+}, function(){
+      
+      $("#cat").hide();
+
 });
 
 // var lightOff = 0;
@@ -60,15 +72,17 @@ $("#status").mouseleave(function() {
 //     if (lightOff == 0) {
 
 //   	    $("#toggle").html("Start");
-//          $("#status").html("STOP");
-//          $("#status").css("background", "red")
+//        $("#status").html("STOP");
+//        $("#status").css("background", "red")
 
 // 			lightOff = 1;
 
 //   	} else {
 
-//          $("#toggle").html("Stop");
-//          $("#status").html("Go");
-//          $("#status").css("background", "green")
+//        $("#toggle").html("Stop");
+//        $("#status").html("Go");
+//        $("#status").css("background", "green")
+          
+//           lightOff = 1;
         
 //   	};
