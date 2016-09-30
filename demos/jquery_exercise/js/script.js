@@ -46,7 +46,13 @@ $("#toggle").toggle(function(){
     
 });
 
+$("#status").mouseenter(function() {
+  $("#cat").show();
+});
 
+$("#status").mouseleave(function() {
+  $("#cat").hide();
+});
 
 // var lightOff = 0;
 
