@@ -44,13 +44,13 @@
         
         //access body and concatenate background colour
         
-        $("body").css( "background-color", "rgb( "+lat2+","+lon2+","+alt2);
+        $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
         
     };
 
     var failureCallback = function() {
         
-        console.log('location failure :(');
+        console.log("location failure :'(");
         
     };
 
@@ -74,21 +74,52 @@
     logLocation();
     
     
-// STORING DATA
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length,c.length);
+    //HIDING AND SHOWING ARCHIVE
+    
+    var clicked = false;
+    
+    $('.button').click(function(){
+  
+      if(clicked == false){
+        
+        $('.archive').hide();
+        
+        clicked = true;
+        
+      } else {
+        
+        $('.archive').show();
+        
+        clicked = false;
+        
+      }
+        
+    });
+    
+    
+    // STORING DATA
+    
+    //setting a cookie - ?
+    
+    lon3 = [];
+    lat3 = [];
+    alt3 = [];
+        
+    if (Cookies.get('longitude')) {
+        xvals = JSON.parse(Cookies.get('xval'));
+        yvals = JSON.parse(Cookies.get('yval'));
+        for (var i=0; i < xvals.length; i++) {
+            $(".stage").append("<div class='dot' style='left: " + xvals[i] + "px; top: " + yvals[i] + "px'></div>");
         }
     }
-    return "";
-}
+    
+    $(".stage").click(function(e) {
+       xvals.push(e.clientX);
+       yvals.push(e.clientY);
+       $(".stage").append("<div class='dot' style='left: " + e.clientX + "px; top: " + e.clientY + "px'></div>");
+       Cookies.set('xval', xvals);
+       Cookies.set('yval', yvals);
+    });
+
 
     
