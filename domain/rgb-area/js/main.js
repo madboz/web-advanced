@@ -65,6 +65,42 @@
             clicked = false;
             
           }
+          
+          var storedLat = [];
+    var storedLon = [];
+    var storedAlt = [];
+    
+    Cookies.set('storedLat','lat2');
+    
+    Cookies.get('lat2');
+    
+    if (Cookies.get('lat2')) {
+        
+        storedLat = JSON.parse(Cookies.get('lat2'));
+        storedLon = JSON.parse(Cookies.get('lon2'));
+        storedAlt = JSON.parse(Cookies.get('alt2'));
+        
+        for (var i=0; i < storedLat.length; i++) {
+            
+            $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+            
+        }
+    }
+    
+    $(".archive").click(function(e) {
+        
+       storedLat.push(lat2);
+       storedLon.push(lon2);
+       storedAlt.push(alt2)
+       
+       $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+       
+       Cookies.set('storedLat', lat2);
+       Cookies.set('storedLon', lon2);
+       Cookies.set('storedAlt', alt2);
+       
+       
+    });
             
         });
         
@@ -96,33 +132,41 @@
     logLocation();
     
     
-    
-    // STORING DATA
-    
-    //setting a cookie ??
-    
-    lon3 = [];
-    lat3 = [];
-    alt3 = [];
-        
-    if (Cookies.get('xval')) {
-        
-        xvals = JSON.parse(Cookies.get('xval'));
-        yvals = JSON.parse(Cookies.get('yval'));
-        
-        for (var i=0; i < xvals.length; i++) {
-            $(".stage").append("<div class='dot' style='left: " + xvals[i] + "px; top: " + yvals[i] + "px'></div>");
-        }
-        
-    }
-    
-    $(".stage").click(function(e) {
-       xvals.push(e.clientX);
-       yvals.push(e.clientY);
-       $(".stage").append("<div class='dot' style='left: " + e.clientX + "px; top: " + e.clientY + "px'></div>");
-       Cookies.set('xval', xvals);
-       Cookies.set('yval', yvals);
-    });
 
-
+    //storing data
     
+    // var storedLat = [];
+    // var storedLon = [];
+    // var storedAlt = [];
+    
+    // Cookies.set('storedLat','lat2');
+    
+    // Cookies.get('lat2');
+    
+    // if (Cookies.get('lat2')) {
+        
+    //     storedLat = JSON.parse(Cookies.get('lat2'));
+    //     storedLon = JSON.parse(Cookies.get('lon2'));
+    //     storedAlt = JSON.parse(Cookies.get('alt2'));
+        
+    //     for (var i=0; i < storedLat.length; i++) {
+            
+    //         $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+            
+    //     }
+    // }
+    
+    // $(".archive").click(function(e) {
+        
+    //   storedLat.push(lat2);
+    //   storedLon.push(lon2);
+    //   storedAlt.push(alt2)
+       
+    //   $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+       
+    //   Cookies.set('storedLat', lat2);
+    //   Cookies.set('storedLon', lon2);
+    //   Cookies.set('storedAlt', alt2);
+       
+       
+    // });
