@@ -110,7 +110,7 @@ body{
     /*width: 17px;*/
     position: absolute;
     /*background: lightgrey;*/
-    border-top: 10px solid lightgrey;
+    border-top: 10px solid #BEC6C9;
   border-bottom: 10px solid transparent; 
   
   border-right:10px solid transparent; 
@@ -123,7 +123,7 @@ body{
     
     height: 60px;
     width: 60px;
-    background: lightgrey;
+    background: #BEC6C9;
     display: inline-block;
     position: relative;
     margin: 40px;
