@@ -20,6 +20,8 @@
         
         if (alt == null) {
             
+            //if alt is null make it middle of spectrum
+            
             alt2 = 127;
             
         } else if (alt <= 0) {
@@ -44,71 +46,67 @@
         
         //access body and concatenate background colour
         
-        // $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
+        $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
+        
+        //showing and hiding archive
         
         var clicked = false;
-    
-        $('.button').click(function(){
-      
-          if(clicked == false){
-            
-            $('.archive').hide();
-            $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
-            
-            clicked = true;
-            
-          } else {
-            
-            $('.archive').show();
-            $('body').css('background-color','white')
-            
-            clicked = false;
-            
-          }
-          
-          var storedLat = [];
-    var storedLon = [];
-    var storedAlt = [];
-    
-    Cookies.set('storedLat','lat2');
-    
-    Cookies.get('lat2');
-    
-    if (Cookies.get('lat2')) {
         
-        storedLat = JSON.parse(Cookies.get('lat2'));
-        storedLon = JSON.parse(Cookies.get('lon2'));
-        storedAlt = JSON.parse(Cookies.get('alt2'));
-        
-        for (var i=0; i < storedLat.length; i++) {
+        $(".button").click(function(){
             
-            $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+            if ( clicked == false ) {
+                
+                $('.archive').removeClass('hidden');
+                $('body').css('background-color','white');
+            
+                clicked = true;
+                
+            } else if ( clicked == true ) {
+                
+                $('.archive').addClass('hidden');
+                $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
+                
+                clicked = false;
+                
+            }
+
+        });
+        
+        var storedLat = [];
+        var storedLon = [];
+        var storedAlt = [];
+        
+        Cookies.set('storedLat', lat2);
+        Cookies.set('storedLon', lon2);
+        Cookies.set('storedAlt', alt2);
+        
+        Cookies.get('lat2');
+        Cookies.get('lon2');
+        Cookies.get('alt2');
+        
+        if (Cookies.get('lat2')) {
+            
+            storedLat = JSON.parse(Cookies.get(lat2));
+            storedLon = JSON.parse(Cookies.get(lon2));
+            storedAlt = JSON.parse(Cookies.get(alt2));
+            
+            for (var i = 0; i < storedLat.length; i++) {
+                
+                $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+                
+            }
             
         }
-    }
-    
-    $(".archive").click(function(e) {
         
-       storedLat.push(lat2);
-       storedLon.push(lon2);
-       storedAlt.push(alt2)
-       
-       $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
-       
-       Cookies.set('storedLat', lat2);
-       Cookies.set('storedLon', lon2);
-       Cookies.set('storedAlt', alt2);
-       
-       
-    });
-            
-        });
+        console.log(storedLat);
+        console.log(storedLon);
+        console.log(storedAlt);
         
     };
 
     var failureCallback = function() {
         
-        console.log("location failure :'(");
+        console.log("location failure :(");
         
     };
 
@@ -130,43 +128,3 @@
     };
 
     logLocation();
-    
-    
-
-    //storing data
-    
-    // var storedLat = [];
-    // var storedLon = [];
-    // var storedAlt = [];
-    
-    // Cookies.set('storedLat','lat2');
-    
-    // Cookies.get('lat2');
-    
-    // if (Cookies.get('lat2')) {
-        
-    //     storedLat = JSON.parse(Cookies.get('lat2'));
-    //     storedLon = JSON.parse(Cookies.get('lon2'));
-    //     storedAlt = JSON.parse(Cookies.get('alt2'));
-        
-    //     for (var i=0; i < storedLat.length; i++) {
-            
-    //         $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
-            
-    //     }
-    // }
-    
-    // $(".archive").click(function(e) {
-        
-    //   storedLat.push(lat2);
-    //   storedLon.push(lon2);
-    //   storedAlt.push(alt2)
-       
-    //   $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
-       
-    //   Cookies.set('storedLat', lat2);
-    //   Cookies.set('storedLon', lon2);
-    //   Cookies.set('storedAlt', alt2);
-       
-       
-    // });
