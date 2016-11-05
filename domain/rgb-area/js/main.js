@@ -1,3 +1,28 @@
+//arrays for stored values
+
+        var storedLat = [];
+        var storedLon = [];
+        var storedAlt = [];
+        
+        if (Cookies.get('lat2')) {
+            console.log(Cookies.get('lat2'));
+            console.log(Cookies.get('lon2'));
+            console.log(Cookies.get('alt2'));
+            
+            
+            storedLat = JSON.parse(Cookies.get('lat2'));
+            storedLon = JSON.parse(Cookies.get('lon2'));
+            storedAlt = JSON.parse(Cookies.get('alt2'));
+            
+            for (var i = 0; i < storedLat.length; i++) {
+                
+                
+                $(".archive").append("<div class='swatch' style='background-color: rgb( " +storedLat[i]+ ", " +storedLon[i]+ "," +storedAlt[i]+ " )'></div>");
+                
+            }
+            
+        }
+
     var successCallback = function(data) {
         
         //get latitude, longitute and altitude
@@ -48,6 +73,10 @@
         
         $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
         
+        //adding swatch with current colour 
+        
+        $(".archive").append("<div class='swatch' style='background-color: rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
+        
         //showing and hiding archive
         
         var clicked = false;
@@ -58,6 +87,7 @@
                 
                 $('.archive').removeClass('hidden');
                 $('body').css('background-color','white');
+                $('.button').html('current &#8594;').css('color','black');
             
                 clicked = true;
                 
@@ -65,6 +95,7 @@
                 
                 $('.archive').addClass('hidden');
                 $('body').css( 'background-color', 'rgb( ' +lat2+ ',' +lon2+ ',' +alt2+ ')');
+                $('.button').html('&#8592 history').css('color','white');
                 
                 clicked = false;
                 
@@ -72,31 +103,13 @@
 
         });
         
-        var storedLat = [];
-        var storedLon = [];
-        var storedAlt = [];
-        
-        Cookies.set('storedLat', lat2);
-        Cookies.set('storedLon', lon2);
-        Cookies.set('storedAlt', alt2);
-        
-        Cookies.get('lat2');
-        Cookies.get('lon2');
-        Cookies.get('alt2');
-        
-        if (Cookies.get('lat2')) {
+        storedLat.push(lat2);
+        storedLon.push(lon2);
+        storedAlt.push(alt2);
             
-            storedLat = JSON.parse(Cookies.get(lat2));
-            storedLon = JSON.parse(Cookies.get(lon2));
-            storedAlt = JSON.parse(Cookies.get(alt2));
-            
-            for (var i = 0; i < storedLat.length; i++) {
-                
-                $(".archive").append("<div class='swatch' style='rgb( " +lat2+ ", " +lon2+ "," +alt2+ " )'></div>");
-                
-            }
-            
-        }
+        Cookies.set("lat2",storedLat);
+        Cookies.set("lon2",storedLon);
+        Cookies.set("alt2",storedAlt);
         
         console.log(storedLat);
         console.log(storedLon);

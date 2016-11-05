@@ -106,16 +106,18 @@ body{
 
 .button{
     
-    height: 17px;
-    width: 17px;
     position: absolute;
-    background: lightgrey;
-    border-radius: 50%;
-    /*border-top: 10px solid #BEC6C9;*/
-    /*border-bottom: 10px solid transparent; */
-    /*border-right:10px solid transparent; */
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 25px;
+    cursor: pointer;
+    font-family: helvetica;
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 3px;
+    border-bottom: solid 1px;
+    z-index: 1000;
+    
     
 }
 
@@ -123,7 +125,6 @@ body{
     
     height: 60px;
     width: 60px;
-    background: lightgrey;
     display: inline-block;
     position: relative;
     margin: 40px;
