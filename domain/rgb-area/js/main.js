@@ -120,6 +120,7 @@
     var failureCallback = function() {
         
         console.log("location failure :(");
+        $('.disp').html('location failure :(');
         
     };
 
