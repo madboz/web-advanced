@@ -1,0 +1,27 @@
+.sub{
+    
+    width: 500px;
+    position: relative;
+    
+}
+
+.hed{
+    
+    position: relative;
+    font-family: helvetica;
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    color: black;
+    padding-bottom: 3px;
+    /*border-bottom: solid 1px;*/
+    z-index: 1000;
+    padding-top: 40px;
+    margin-bottom: 10px;
+}
+
+iframe{
+    
+    height: 300px;
+    border: none;
+    
+}
