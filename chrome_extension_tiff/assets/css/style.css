@@ -1,0 +1,9 @@
+/* add this to your CSS file */
+#project-wrapper {
+	opacity: 0;
+	transition: opacity 1.5s linear;
+}
+/* add this to your CSS file */
+#project-wrapper.fade-in {
+	opacity: 1;
+}
