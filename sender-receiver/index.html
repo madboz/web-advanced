@@ -4,10 +4,10 @@
       
     <meta charset="UTF-8">
     
-    <title>humid browsing - moments</title>
+    <title>Humid Browsing</title>
     
-    <link rel="icon" type="image/png" href="icon16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="icon32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     
     <style type="text/css">
        
@@ -48,16 +48,18 @@
        .inline{
            
            display: inline-block;
-           padding-right: 30px;
+           margin-right: 30px;
            
        }
        
        .sub-subhead{
            
            font-family: helveticaneue-bold;
-           font-size: 14px;
+           color: grey;
+           font-size: 16px;
            margin-left: 100px;
-
+           margin-bottom: 40px;
+           margin-top: 10px;
            
        }
        
@@ -77,12 +79,24 @@
            margin-bottom: 40px;
        }
        
+       .border{
+           
+           border: #efefef 3px solid;
+           /*border-radius: 12px;*/
+           
+       }
+       
+       .extra-space{
+           
+           margin-bottom:55px;
+           
+       }
        
     </style>
 </head>
 <body>
 
-    <div class='head' >Humid Browsing - Moments</div>
+    <div class='head' >Humid Browsing</div>
     <div class='subhead'>Browsing Experience</div>
     <div>
         <video width="80%" autoplay loop >
@@ -105,41 +119,50 @@
         <img src="images/high-humidity.png" width='80%'></img>
     </div>
     
-    <div class='subhead' >Icons</div>
-    <div>
-        
-        <div class='inline'>
-            <div class='sub-subhead'>On</div>
-            <img src="images/icon128.png"></img>
-        </div>
-        <div class='inline'>
-            <div class='sub-subhead'>Off</div>
-            <img src="images/off128.png"></img>
-        </div>
-    
-    </div>
-    
     <div class='subhead' >Extension</div>
     <div>
-        <img src="images/extension.png" width='70%' ></img>
+        <img src="images/extension.png" width='80%' class='border'></img>
     </div>
     
-    <div class='subhead' >Message</div>
-    <div>
-        <img src="images/message.png"></img>
+    <div class='inline'>
+        <div class='subhead' >Icons - on/off</div>
+        
+        <div class='inline'>
+            
+            <div class='inline'>
+                <img src="images/icon128.png" class='extra-space'></img>
+                <!--<div class='sub-subhead'>On</div>-->
+            </div>
+            
+            <div class='inline'>
+                <img src="images/off128.png" class='extra-space'></img>
+                <!--<div class='sub-subhead'>Off</div>-->
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class='inline'>
+        
+        <div class='subhead' >Message</div>
+        
+        <div class='inline'>
+            <img src="images/message.png" class='border'></img>
+        </div>
+        
     </div>
     
     <div class='subhead' >Other Details</div>
     <div>
         
         <div class='inline'>
-            <img src="images/font-change.png" class='inline'></img>
+            <img src="images/font-change.png" class='inline border' height='100px'></img>
         </div>
         <div class='inline'>
-            <img src="images/font-change-2.png" class='inline'></img>
+            <img src="images/font-change-2.png" class='inline border' height='100px'></img>
         </div>
         <div class='inline'>
-            <img src="images/font-change-3.png" class='inline'></img>
+            <img src="images/font-change-3.png" class='inline border' height='100px'></img>
         </div>
         
     </div>
